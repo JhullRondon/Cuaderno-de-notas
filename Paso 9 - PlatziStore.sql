@@ -26,7 +26,7 @@ drop table if exists PROVEEDOR;
 create table CARRITO
 (
    CARRITO_ID           int not null auto_increment,
-   CLLIENTE_ID          int not null,
+   CLIENTE_ID          int not null,
    CLIENTE_CUENTAPLATZI varchar(60) not null,
    MPAGO_ID             int not null,
    MCOMPRA_ID           int not null,
@@ -54,14 +54,14 @@ create table CARRITO_ITEM
 /*==============================================================*/
 create table CLIENTE
 (
-   CLLIENTE_ID          int(10) not null auto_increment,
+   CLIENTE_ID          int(10) not null auto_increment,
    CLIENTE_CUENTAPLATZI varchar(60) not null,
    CLIENTE_NOMBRE       varchar(80) not null,
    CLIENTE_FECHAINI     timestamp not null,
    CLIENTE_CORREO       varchar(60),
    CLIENTE_FECHANAC     timestamp,
    CLIENTE_PREFERENCIAS varchar(300),
-   primary key (CLLIENTE_ID, CLIENTE_CUENTAPLATZI)
+   primary key (CLIENTE_ID, CLIENTE_CUENTAPLATZI)
 );
 
 /*==============================================================*/
@@ -132,8 +132,8 @@ create table PROVEEDOR
    primary key (PROV_ID, PROV_CODCC)
 );
 
-alter table CARRITO add constraint FK_CARRITO_CLIENTE foreign key (CLLIENTE_ID, CLIENTE_CUENTAPLATZI)
-      references CLIENTE (CLLIENTE_ID, CLIENTE_CUENTAPLATZI) on delete restrict on update restrict;
+alter table CARRITO add constraint FK_CARRITO_CLIENTE foreign key (CLIENTE_ID, CLIENTE_CUENTAPLATZI)
+      references CLIENTE (CLIENTE_ID, CLIENTE_CUENTAPLATZI) on delete restrict on update restrict;
 
 alter table CARRITO add constraint FK_CARRITO_MCOMPRA foreign key (MCOMPRA_ID, MCOMPRA_COD)
       references MCOMPRA (MCOMPRA_ID, MCOMPRA_COD) on delete restrict on update restrict;
