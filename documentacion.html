@@ -6,6 +6,10 @@
     <title>Metodologia de 9 pasos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style> 
+    /*permite crear cajas*/
+    * {
+        box-sizing: border-box;
+    }
         /*Estilos en el body*/
         body{
             margin: 0;
@@ -53,6 +57,21 @@
             background-color: rgba(227, 231, 250, 0.842);
             color: black;
         }
+        .row{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .column{
+            background-color: rgb(187, 238, 221);
+            float: left;
+            padding: 10px;
+            height: 50%;
+        }
+        exampleImg{
+            background-color: aliceblue;
+            width: 100%;
+            padding: 10px;
+        }
 
     </style>
 </head>
@@ -74,6 +93,43 @@
     <a href="#">Paso 8</a>
     <a href="#">Paso 9</a>
     <a href="#" class="right">Volver</a>
+</div>
+
+<div class="row">
+    <div class="column" style="flex: 60%; height: 300px;">
+        <h2>Paso 1</h2>
+        <p>Durante este paso tenemos 2 cosas importantes que realizar:
+            <ul>
+                <li>Documentarse lo más posible acerca del proyecto</li>
+                <li>Identificar las entidades que se utilizaran en la DB</li>
+            </ul>
+        </p>
+        <p>Unas cosas a tomar en cuenta mientras se crean las entidades
+            es que deben estar escritas en mayusculas y de ser posible escribirlas en ingles. <br><br>
+            Una buena técnica para determinar de forma natural una entidad, es identificar 
+            aquellos elementos que poseen atributos que los definen y que además aporta 
+            algo para definir el modelo del negocio. Definitivamente un elemento al que yo 
+            tenga que forzarle sus atributos, no es una entidad.
+        </p>
+
+    </div>
+
+    <div class="column" style="flex: 40%; height: 300px;">
+        <h2>Ejemplo de una DB de PlatziStore</h2>
+        <h3>Entidades</h3>
+        <p>
+           <strong>Cliente</strong> - Los clientes pueden ser los estudiantes o los que quieran acceder a comprar un objeto de merchandising<br>
+           <strong>Item</strong> - Un item es cada objeto de merchandising, va a pertenecer a un lote el cual va a ser el control del inventario<br>
+           <strong>Método Compra</strong> - Se refiere a la compra por medio de la página, aplicación o una tienda específica<br>
+           <strong>Método Pago</strong> - son las formas de pago que se van a aceptar como efectivo o tarjeta<br>
+           <strong>Proveedor</strong> - Son los proveedores de los items sirve para llevar el control histórico de compras<br>
+           <strong>Carrito</strong> -  así se va a llamar un paquete de uno o varios productos que tenga el cliente<br>                        
+        </p>
+           
+    </div>
+
+
+    
 </div>
 
 </body>
