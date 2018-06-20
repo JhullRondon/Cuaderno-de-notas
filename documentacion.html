@@ -19,16 +19,12 @@
         /*Estilos en el header*/
         .header
         {
-            padding: 80px;/*es el relleno entre el margen y las letras*/
-            text-align: center;
-            background: #afdfd5;
-            color: rgba(101, 72, 235, 0.863);            
-        }
-        /*cambiar el color y la fuente al Parafo en el header*/
-        .header p{
-            font-size: 20px;
-            color: black;
-            font-family: sans-serif;          
+            padding: 150px;/*es el relleno entre el margen y las letras*/
+            background: #ffffff;      
+            background-image: url(DB.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
 
         /* Style the top navigation bar */
@@ -54,23 +50,21 @@
         /* Change color on hover
         (cuando le pones el puntero encima del boton) */
         .navbar a:hover {
-            background-color: rgba(227, 231, 250, 0.842);
+            background-color: rgba(240, 241, 247, 0.842);
             color: black;
         }
         .row{
-            display: flex;
+            display: none;            
             flex-wrap: wrap;
         }
         .column{
-            background-color: rgb(187, 238, 221);
             float: left;
             padding: 10px;
-            height: 50%;
         }
-        exampleImg{
-            background-color: aliceblue;
-            width: 100%;
+        img{
             padding: 10px;
+            background-color: rgba(162, 180, 209, 0.685);
+            align-content: center;
         }
 
     </style>
@@ -78,25 +72,23 @@
 <body>
 
 <div class="header"> 
-    <h1>La metodologia de 9 pasos para el diseño de una<strong> BASE DE DATOS</strong> en SQL</h1>
-    <p>Serie de pasos para crear una base de datos relacional de manera eficiente y reduciendo errores de consistencia</p>
 </div>
 
 <div class="navbar">
-    <a href="#">Paso 1</a>
-    <a href="#">Paso 2</a>
-    <a href="#">Paso 3</a>
-    <a href="#">Paso 4</a>
-    <a href="#">Paso 5</a>
-    <a href="#">Paso 6</a>
-    <a href="#">Paso 7</a>
-    <a href="#">Paso 8</a>
-    <a href="#">Paso 9</a>
-    <a href="#" class="right">Volver</a>
+    <a onclick="switching(1)">Paso 1</a>
+    <a onclick="switching(2)">Paso 2</a>
+    <a onclick="switching(3)">Paso 3</a>
+    <a onclick="switching(4)">Paso 4</a>
+    <a onclick="switching(5)">Paso 5</a>
+    <a onclick="switching(6)">Paso 6</a>
+    <a onclick="switching(7)">Paso 7</a>
+    <a onclick="switching(8)">Paso 8</a>
+    <a onclick="switching(9)">Paso 9</a>
+    <a onclick="switching(10)" class="right">Volver</a>
 </div>
-
-<div class="row">
-    <div class="column" style="flex: 60%; height: 300px;">
+<!-- contenido del paso 1 -->
+<div class="row" id="paso1" style="display: none;">
+    <div class="column" style="width: 70%;">
         <h2>Paso 1</h2>
         <p>Durante este paso tenemos 2 cosas importantes que realizar:
             <ul>
@@ -114,7 +106,7 @@
 
     </div>
 
-    <div class="column" style="flex: 40%; height: 300px;">
+    <div class="column" style="width: 30%;">
         <h2>Ejemplo de una DB de PlatziStore</h2>
         <h3>Entidades</h3>
         <p>
@@ -124,13 +116,51 @@
            <strong>Método Pago</strong> - son las formas de pago que se van a aceptar como efectivo o tarjeta<br>
            <strong>Proveedor</strong> - Son los proveedores de los items sirve para llevar el control histórico de compras<br>
            <strong>Carrito</strong> -  así se va a llamar un paquete de uno o varios productos que tenga el cliente<br>                        
+        </p>           
+    </div>    
+</div>
+<!-- contenido del paso 2 -->
+<div id="paso2" class="row" style="display: none;">
+    <div class="column" style="width: 60%;">
+        <h2>Paso 2</h2>
+        <p>En este paso tratamos de identificar todas las posibles relaciones
+            entre las entidades que hemos definido en el paso 1. <br>
+            Para denotar las relaciones usaremos una simbología que nos ayudara
+            a entender mejor los tipos de relaciones:
+            <ul>
+                <li><strong>0 - 1 </strong>Usado para definir una relacion no obligatoria dond se puede tener uno o ninguno de los elementos con que se relaciona</li>
+                <li><strong>1 - 1 </strong>Representa Obligatoriedad y debe tener al mnenos un elemento con el que se relaciona</li>
+                <li><strong>0 - M </strong>Relacion no obligatoria donde se puede tener muchos o ningun elemento con el que se relaciona</li>
+                <li><strong>1 - M </strong>Relacion obligatoria de uno a muchos elementos</li>
+                <li><strong>M - M </strong>Es una relacion donde los elementos implicados pueden tener muchos elemtentos de la parte con que se relacionan</li>
+            </ol>             
         </p>
-           
+        <p>Por lo general no se hacen relaciones entre mismas entidades aunque existen casos donde si se pueden dar este tipo de relaciones</p>
+
+    </div>
+    <div class="column" style="width: 40%;">
+        <h3>Un ejemplo de esto, si seguimos con el ejemplo de PlatziStore:</h3>
+        
+        <img src="Paso 2 - Relaciones entre Entidades.PNG" alt="tabla de relaciones" height="215">
+        
     </div>
 
-
-    
 </div>
 
+<div class="row" id="paso3" style="display: none;"></div>
+<div class="row" id="paso4" style="display: none;"></div>
+<div class="row" id="paso5" style="display: none;"></div>
+<div class="row" id="paso6" style="display: none;"></div>
+<div class="row" id="paso7" style="display: none;"></div>
+<div class="row" id="paso8" style="display: none;"></div>
+<div class="row" id="paso9" style="display: none;"></div>
+<div class="row" id="paso10" style="display: block; text-align: center;">
+        <h1>La metodologia de 9 pasos para el diseño de una<strong> BASE DE DATOS</strong> en SQL</h1>
+        <p style="font-size: 20px;">Serie de pasos para crear una base de datos relacional de manera eficiente y 
+            reduciendo errores de consistencia</p>
+</div>
+
+
+<script src="main.js"></script>
 </body>
 </html>
