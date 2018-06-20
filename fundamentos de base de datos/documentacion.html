@@ -84,7 +84,7 @@
     <a onclick="switching(7)">Paso 7</a>
     <a onclick="switching(8)">Paso 8</a>
     <a onclick="switching(9)">Paso 9</a>
-    <a onclick="switching(10)" class="right">Volver</a>
+    <a onclick="switching(10)" class="right">Main</a>
 </div>
 <!-- contenido del paso 1 -->
 <div class="row" id="paso1" style="display: none;">
@@ -275,7 +275,29 @@
         <img src="Paso 8 - Modelo Fisico.png" alt="modelo fisico" height="450">
     </div>   
 </div>
-<div class="row" id="paso9" style="display: none;"></div>
+<!-- contenido paso 9 -->
+<div class="row" id="paso9" style="display: none;">
+    <div class="column" style="width: 40%; margin-left: 9%;">
+        <h2>Paso 9</h2>
+        <p>El codigo SQL, ya entramos en los que vendria a ser el codigo de nuestra base de datos que acabamos de diseñar. 
+            Antes de empezar el codigo se debe tener a la mano tanto el diagrama logico como fisico porq que ellos verificaremos
+             las tablas y los constraints o restricciones
+        </p>
+        <p>
+            En un ambiente de desarrollo al momento de comenzar a trabajar con nuestro modelo de datos para nuestra aplicación, se recomienda al momento crear tablas borrarlas en el caso de que existan con DROP TABLE. <br> <br>
+            A la hora de estar haciendo pruebas, cuando generamos código SQL, vamos a generar tablas nuevas en nuestra base de datos, si por error creamos una tabla o ya existe una tabla al momento de aplicar nuestros cambios se pueden generar inconsistencias. <br><br>
+            Dependiendo del motor de bases de datos, podemos sobre-escribir la estructura o no en el momento de que ya exista una tabla con ciertos atributos. <br><br>
+            Estas tablas se van a borrar en el orden de la tabla que tenga menos relaciones con otras tablas (estas relaciones se van a romper o borrar). <br><br>
+            Quitar tablas al comienzo no se debe utilizar en ambientes de producción al momento de crear tablas nuevas, si se hace se pueden dañar las dependencias de las tablas. <br>
+        </p>
+        <p></p>
+
+    </div>
+    <div class="column" style="width: 50%;">
+        <h3>Ejemplo del codigo de la DB de PlatziStore</h3>
+        <iframe src="Paso 9 - PlatziStore.sql" frameborder="0" width="85%" height="450px" style="background-color: white;"></iframe>
+    </div>
+</div>
 <div class="row" id="paso10" style="display: block; text-align: center;">
         <h1>La metodologia de 9 pasos para el diseño de una<strong> BASE DE DATOS</strong> en SQL</h1>
         <p style="font-size: 20px;">Serie de pasos para crear una base de datos relacional de manera eficiente y 
