@@ -133,9 +133,10 @@
                 <li><strong>0 - M </strong>Relacion no obligatoria donde se puede tener muchos o ningun elemento con el que se relaciona</li>
                 <li><strong>1 - M </strong>Relacion obligatoria de uno a muchos elementos</li>
                 <li><strong>M - M </strong>Es una relacion donde los elementos implicados pueden tener muchos elemtentos de la parte con que se relacionan</li>
-            </ol>             
+            </ul>             
         </p>
-        <p>Por lo general no se hacen relaciones entre mismas entidades aunque existen casos donde si se pueden dar este tipo de relaciones</p>
+        <p>Por lo general no se hacen relaciones entre mismas entidades aunque existen casos donde si se pueden dar este tipo de relaciones. <br> <br>
+            Se tienen que buscar que las relariones sean equivalentes/complementarias NO deben de ser iguales. La relacion debe de ser en dos sentidos, al menos de 0:1.</p>
 
     </div>
     <div class="column" style="width: 40%;">
@@ -147,8 +148,59 @@
 
 </div>
 
-<div class="row" id="paso3" style="display: none;"></div>
-<div class="row" id="paso4" style="display: none;"></div>
+<div class="row" id="paso3" style="display: none;">
+        <div class="column" style="width: 40%;">
+            <h2>Paso 3</h2>
+            <p>
+                En este paso se debe realizar el diagrama de relaciones que hemos determinado en el paso 2. <br>
+                para realizar este diagrama se deben seguir los siguientes pasos: <br>
+
+                <ul>
+                    <li> Las entidades se representan con rectangulos con su nombre en el centro</li>
+                    <li> Las relaciones no obligatorias se representan con una linea punteada</li>
+                    <li> Las relaciones obligatorias se representan con una linea recta</li>
+                    <li> Las relaciones que terminan en muchos se representan con una bifucacion parecida a una pata de gallo</li>
+                    <li> Normalmente la entidad que tiene mas relaciones va en el centro y de alli se dibujan las otras a su alrededor</li>
+                </ul>
+            </p>
+            <p>Es importante recordar q en este paso aun no definimos los <strong>atributos</strong> de las entidades</p>
+        </div>
+
+        <div class="column" style="width: 60%;">
+            <h3>Ejemplo del ejercicio de PlatziStore:</h3>
+            <img src="Paso 3 - Entidades y relaciones.png" alt="entidades y relaciones" height="400">
+        </div>
+
+</div>
+
+<div class="row" id="paso4" style="display: none;">
+    <div class="column" style="width: 40%;">
+        <h2>Paso 4</h2>
+        <p>
+            Ahora si vamos a asignar atributos a las entidades, para realizar esto reduciendola probabilida de errores o omisiones de atributos
+            debemos responder estas sencillas preguntas a la hora de identificar atributos: <br>
+            <ul>
+                <li>¿Que atributos voy a necesitar?</li>
+                <li>¿Cual va a ser la codificación que voy a utilizar?</li>
+                <li>¿Como los voy a trabajar dependiendo del tipo de dato?</li>
+            </ul>
+        </p>
+
+        <p>
+            Es importante tener en cuenta que a medida que vamos creando atributosa cada entidad
+            debemos pensar en cual o cuales seran los atributos primarios de cada entidad y ademas cuales seran atributos obligatorios
+            y cuales no lo seran. <br>
+            una llave primaria debe ser siempre obligatoria y unica, en general se asigna un tipo de dato serial, porque solo debe de haber una unica
+            de llegar a esa entidad y debe ser por la llave primaria.
+
+        </p>
+    </div>
+
+    <div class="column" style="width: 60%;">
+        <h3>Como ejemplo 2 tablas de las entidades del ejerciciode PlatziStore</h3>
+        <img src="paso 4.png" alt="tabla de item y carrito" height="500">
+    </div>
+</div>
 <div class="row" id="paso5" style="display: none;"></div>
 <div class="row" id="paso6" style="display: none;"></div>
 <div class="row" id="paso7" style="display: none;"></div>
