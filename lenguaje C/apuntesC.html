@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Algoritmos y lenguaje C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: rgb(190, 245, 190);
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(14, 14, 14);
+            overflow: hidden;
+            padding-top: 25px;
+        }
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            color: rgb(184, 94, 94);
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            font-size: 18px;
+        }
+        .sidenav a:hover, .dropdown-btn:hover {
+            color: aquamarine;
+        }
+        .active {
+            background-color: rgb(37, 61, 12);
+            color: aquamarine;
+        }
+        .dropdown-container {
+            display: none;
+            background-color: rgb(34, 31, 31);
+            padding-left: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a href="../index.html">CUADERNO DE NOTAS</a>
+        <button class="dropdown-btn">Dropdown    
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+<script>
+    var drop = document.getElementsByClassName("dropdown-btn");
+    
+    for (i = 0; i <drop.length; i++)
+    {
+        drop[i].addEventListener("click", function() //comprueba que boton es el que se le ha hecho click
+        {
+            this.classList.toggle("active");// lo cambia a la clase active
+            var dropContent = this.nextElementSibling;
+            if (dropContent.style.display === "none"){
+                dropContent.style.display = "block";
+            }else{
+                dropContent.style.display = "none";
+            }
+        });
+        
+    }
+</script>
+</body>
+</html>
