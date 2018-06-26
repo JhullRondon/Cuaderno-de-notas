@@ -9,10 +9,11 @@
         body{
             background-color: rgb(190, 245, 190);
         }
+        /*esconde el menu fuera de la pagina hasta que se le pone el raton encima*/
         #sidebar a{
             position: absolute;
             left: -110px;
-            transition: 0.4s;
+            transition: 0.4s;/*tiempo en que tarda la transicion de escondido a no escondido*/
             padding: 15px;
             width: 115px;
             text-decoration: none;
@@ -21,11 +22,12 @@
             color: antiquewhite;
             border-radius: 0 6px 6px 0;
         }
-
+            /* muestra el menu escondido*/
         #sidebar a:hover
         {
             left: 0;
         }
+        /*define el espacio entre botones*/
         #fdb {
             top :220px;
             background-color: rgb(77, 77, 218);
