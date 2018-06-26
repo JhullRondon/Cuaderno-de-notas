@@ -32,7 +32,7 @@
             text-align: left;
             cursor: pointer;
             outline: none;
-            font-size: 18px;
+            font-size: 16px;
         }
         .sidenav a:hover, .dropdown-btn:hover {
             color: aquamarine;
@@ -51,12 +51,21 @@
 <body>
     <div class="sidenav">
         <a href="../index.html">CUADERNO DE NOTAS</a>
-        <button class="dropdown-btn">Dropdown    
+        <button class="dropdown-btn">Algoritmos    
         </button>
         <div class="dropdown-container">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
+            <a href="#">Definicion</a>
+            <a href="#">Metodología de solucion de un algoritmo</a>
+            <a href="#">Metodología para extraer datos de un algoritmo</a>
+            <a href="#">Objetivos del analisís algoritmos</a>
+            <a href="#">Comparar algoritmos</a>
+        </div>
+        <button class="dropdown-btn">Estructuras de control     
+        </button>
+        <div class="dropdown-container">
+            <a href="#">Estructuras secuenciales</a>
+            <a href="#">Estructuras selectivas</a>
+            <a href="#">Estructuras repetitivas</a>
         </div>
     </div>
 <script>
@@ -66,7 +75,7 @@
     {
         drop[i].addEventListener("click", function() //comprueba que boton es el que se le ha hecho click
         {
-            this.classList.toggle("active");// lo cambia a la clase active
+            //this.classList.toggle("active");// lo cambia a la clase active
             var dropContent = this.nextElementSibling;
             if (dropContent.style.display === "none"){
                 dropContent.style.display = "block";
