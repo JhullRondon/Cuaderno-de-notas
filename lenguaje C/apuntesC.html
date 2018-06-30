@@ -10,6 +10,7 @@
             background-color: rgb(190, 245, 190);
         }
 
+
         .sidenav {
             height: 100%;
             width: 200px;
@@ -24,6 +25,7 @@
         .sidenav a, .dropdown-btn {
             padding: 6px 8px 6px 16px;
             text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             color: rgb(184, 94, 94);
             display: block;
             border: none;
@@ -35,7 +37,7 @@
             font-size: 16px;
         }
         .sidenav a:hover, .dropdown-btn:hover {
-            color: aquamarine;
+            color: rgb(253, 253, 253);
         }
         .active {
             background-color: rgb(37, 61, 12);
@@ -50,8 +52,8 @@
 </head>
 <body>
     <div class="sidenav">
-        <a href="../index.html">CUADERNO DE NOTAS</a>
-        <button class="dropdown-btn">Algoritmos    
+        <a href="#">INICIO</a>
+        <button class="dropdown-btn">ALGORTIMOS 
         </button>
         <div class="dropdown-container">
             <a href="#">Definicion</a>
@@ -60,27 +62,28 @@
             <a href="#">Objetivos del analisís algoritmos</a>
             <a href="#">Comparar algoritmos</a>
         </div>
-        <button class="dropdown-btn">Estructuras de control     
+        <button class="dropdown-btn">ESTRUCTURAS DE CONTROL
         </button>
         <div class="dropdown-container">
             <a href="#">Estructuras secuenciales</a>
             <a href="#">Estructuras selectivas</a>
             <a href="#">Estructuras repetitivas</a>
         </div>
+        <a href="../index.html">CUADERNO DE NOTAS</a>
     </div>
 <script>
     var drop = document.getElementsByClassName("dropdown-btn");
     
     for (i = 0; i <drop.length; i++)
-    {
-        drop[i].addEventListener("click", function() //comprueba que boton es el que se le ha hecho click
+    {   //comprueba que boton es el que se le ha hecho click
+        drop[i].addEventListener("click", function() 
         {
             //this.classList.toggle("active");// lo cambia a la clase active
             var dropContent = this.nextElementSibling;
-            if (dropContent.style.display === "none"){
-                dropContent.style.display = "block";
-            }else{
+            if (dropContent.style.display === "block"){
                 dropContent.style.display = "none";
+            }else{
+                dropContent.style.display = "block";
             }
         });
         
