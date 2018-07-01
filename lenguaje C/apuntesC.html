@@ -9,7 +9,16 @@
         body {
             background-color: rgb(190, 245, 190);
         }
-
+        .main {
+            position: absolute;
+            left: 200px;
+            height: 100%;
+            padding: 15px;
+            display: none;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 12%;
+            text-align: center;
+        }
 
         .sidenav {
             height: 100%;
@@ -52,42 +61,46 @@
 </head>
 <body>
     <div class="sidenav">
-        <a href="#">INICIO</a>
+        <a onclick="switching(0)">INICIO</a>
         <button class="dropdown-btn">ALGORTIMOS 
         </button>
         <div class="dropdown-container">
-            <a href="#">Definicion</a>
-            <a href="#">Metodología de solucion de un algoritmo</a>
-            <a href="#">Metodología para extraer datos de un algoritmo</a>
-            <a href="#">Objetivos del analisís algoritmos</a>
-            <a href="#">Comparar algoritmos</a>
+            <a onclick="switching(1)">Metodología de solucion de un algoritmo</a>
+            <a onclick="switching(2)">Metodología para extraer datos de un algoritmo</a>
+            <a onclick="switching(3)">Objetivos del analisís algoritmos</a>
+            <a onclick="switching(4)">Comparar algoritmos</a>
         </div>
         <button class="dropdown-btn">ESTRUCTURAS DE CONTROL
         </button>
         <div class="dropdown-container">
-            <a href="#">Estructuras secuenciales</a>
-            <a href="#">Estructuras selectivas</a>
-            <a href="#">Estructuras repetitivas</a>
+            <a onclick="switching(5)">Estructuras secuenciales</a>
+            <a onclick="switching(6)">Estructuras selectivas</a>
+            <a onclick="switching(7)">Estructuras repetitivas</a>
         </div>
         <a href="../index.html">CUADERNO DE NOTAS</a>
     </div>
-<script>
-    var drop = document.getElementsByClassName("dropdown-btn");
-    
-    for (i = 0; i <drop.length; i++)
-    {   //comprueba que boton es el que se le ha hecho click
-        drop[i].addEventListener("click", function() 
-        {
-            //this.classList.toggle("active");// lo cambia a la clase active
-            var dropContent = this.nextElementSibling;
-            if (dropContent.style.display === "block"){
-                dropContent.style.display = "none";
-            }else{
-                dropContent.style.display = "block";
-            }
-        });
-        
-    }
-</script>
+
+    <div id="link0" class="main" style="display: block;">
+        <h2>Algoritmos</h2>
+        En informática, un algoritmo es una secuencia de instrucciones secuenciales, gracias al cual pueden llevarse a cabo ciertos procesos y darse respuesta a determinadas necesidades o decisiones. Se trata de conjuntos ordenados y finitos de pasos, que nos permiten resolver un problema o tomar una decisión.
+        Los algoritmos no tienen que ver con los lenguajes de programación, dado que un mismo algoritmo o diagrama de flujo puede representarse en diversos lenguajes de programación, es decir, se trata de un ordenamiento previo a la programación.
+        Visto así, un programa no es otra cosa que una serie compleja de algoritmos ordenados y codificados mediante un lenguaje de programación para su posterior ejecución en un computador.
+        Los algoritmos también son frecuentes en la matemática y la lógica, y son la base de la fabricación de manuales de usuario, folletos de instrucciones, etc. Su nombre proviene del latín algoritmus y éste apellido del matemático persa Al-Juarismi. Uno de los algoritmos más conocidos de la matemática es el atribuido a Euclides, para obtener el máximo común divisor de dos enteros positivos, o el llamado “método de Gauss” para resolver sistemas de ecuaciones lineales.       
+    </div>
+
+    <div id="link1" class="main">
+        <h2>Metodología de solución de un algoritmo</h2>
+        <ul style="text-align: left;">
+            <li>Definición del problema: delimitar el problema que vamos a resolver</li>
+            <li>Análisis: identificar todos los elementos que se relacionan en nuestro problema</li>
+            <li>Diseño del algoritmo: darle forma al algoritmo</li>
+            <li>Verificación o pruebas: someter al pruebas al algoritmo y comprobar que funcione correctamente</li>
+        </ul>
+    </div>
+
+    <div id="link2" class="main">
+        <h2>Metodología para extraer datos de un algoritmo</h2>
+    </div>
+<script src="main.js"></script>
 </body>
 </html>
