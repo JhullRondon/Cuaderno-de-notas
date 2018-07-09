@@ -1,18 +1,26 @@
+/*Los estilos que he aprendido*/
 body {
-    background-color: rgb(190, 245, 190);
+    background-color: rgba(190, 245, 190, 0.801);
+    background-image: url(cubo.png);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-attachment: fixed;
+    background-position: center;
+    
 }
 
 #header {
     margin: -10px;
     height: 50px;
-    background-color: rgb(99, 200, 240);
+    background-color: rgba(99, 200, 240, 0.801);
     text-align: center;
     padding: 70px;
+    background-image: linear-gradient(rgb(103, 150, 252), aqua);
 }
 .recuadro {
     width: 350px;
     padding: 5px;
-    background-color: peru;
+    background-image: linear-gradient(peru, rgb(185, 110, 34));
     border: 3px solid rgba(185, 97, 10, 0.664);
     border-radius: 35px 0px 35px 0px;
 }
@@ -59,4 +67,8 @@ body {
 #regex {
     top: 420px;
     background-color: cadetblue;
+}
+
+#main {
+    margin-left: 120px; width: 40%;
 }
