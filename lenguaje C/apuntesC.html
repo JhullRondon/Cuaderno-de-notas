@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Algoritmos y lenguaje C</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: rgb(190, 245, 190);
+        }
+        .main {
+            position: absolute;
+            left: 200px;
+            height: 100%;
+            padding: 15px;
+            display: none;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 12%;
+            text-align: center;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(14, 14, 14);
+            overflow: hidden;
+            padding-top: 25px;
+        }
+        .sidenav a, .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(184, 94, 94);
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            font-size: 16px;
+        }
+        .sidenav a:hover, .dropdown-btn:hover {
+            color: rgb(253, 253, 253);
+        }
+        .active {
+            background-color: rgb(37, 61, 12);
+            color: aquamarine;
+        }
+        .dropdown-container {
+            display: none;
+            background-color: rgb(34, 31, 31);
+            padding-left: 9px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidenav">
+        <a onclick="switching(0)">INICIO</a>
+        <button class="dropdown-btn">ALGORTIMOS 
+        </button>
+        <div class="dropdown-container">
+            <a onclick="switching(1)">Metodología de solucion de un algoritmo</a>
+            <a onclick="switching(2)">Metodología para extraer datos de un algoritmo</a>
+            <a onclick="switching(3)">Objetivos del analisís algoritmos</a>
+            <a onclick="switching(4)">Comparar algoritmos</a>
+        </div>
+        <button class="dropdown-btn">ESTRUCTURAS DE CONTROL
+        </button>
+        <div class="dropdown-container">
+            <a onclick="switching(5)">Estructuras secuenciales</a>
+            <a onclick="switching(6)">Estructuras selectivas</a>
+            <a onclick="switching(7)">Estructuras repetitivas</a>
+        </div>
+        <a href="../index.html">CUADERNO DE NOTAS</a>
+    </div>
+
+    <div id="link0" class="main" style="display: block;">
+        <h2>Algoritmos</h2>
+        En informática, un algoritmo es una secuencia de instrucciones secuenciales, gracias al cual pueden llevarse a cabo ciertos procesos y darse respuesta a determinadas necesidades o decisiones. Se trata de conjuntos ordenados y finitos de pasos, que nos permiten resolver un problema o tomar una decisión.
+        Los algoritmos no tienen que ver con los lenguajes de programación, dado que un mismo algoritmo o diagrama de flujo puede representarse en diversos lenguajes de programación, es decir, se trata de un ordenamiento previo a la programación.
+        Visto así, un programa no es otra cosa que una serie compleja de algoritmos ordenados y codificados mediante un lenguaje de programación para su posterior ejecución en un computador.
+        Los algoritmos también son frecuentes en la matemática y la lógica, y son la base de la fabricación de manuales de usuario, folletos de instrucciones, etc. Su nombre proviene del latín algoritmus y éste apellido del matemático persa Al-Juarismi. Uno de los algoritmos más conocidos de la matemática es el atribuido a Euclides, para obtener el máximo común divisor de dos enteros positivos, o el llamado “método de Gauss” para resolver sistemas de ecuaciones lineales.       
+    </div>
+
+    <div id="link1" class="main">
+        <h2>Metodología de solución de un algoritmo</h2>
+        <ul style="text-align: left;">
+            <li>Definición del problema: delimitar el problema que vamos a resolver</li>
+            <li>Análisis: identificar todos los elementos que se relacionan en nuestro problema</li>
+            <li>Diseño del algoritmo: darle forma al algoritmo</li>
+            <li>Verificación o pruebas: someter al pruebas al algoritmo y comprobar que funcione correctamente</li>
+        </ul>
+    </div>
+
+    <div id="link2" class="main">
+        <h2>Metodología para extraer datos de un algoritmo</h2>
+        <ul>
+            <li>Entrada: que se necesita para realizar los pasos</li>
+            <li>Salida: que se obtiene al final del algoritmo</li>
+            <li>Tipo de datos: saber qué tipo de dato manejara el algoritmo como: números, textos, otro…</li>
+        </ul>
+    </div>
+
+    <div id="link3" class="main">
+        <h2>Objetivos del análisis de algoritmos</h2>
+        <ul>
+            <li>Resolver el problema antes de empezar la primera línea de código</li>
+            <li>Buscar las posibles soluciones y seleccionar la mas eficiente</li>
+            <li>Reducir tiempo de verificación y corrección</li>
+        </ul>
+    </div>
+
+    <div id="link4" class="main">
+        <h2>Como comparar algoritmos</h2>
+        <p>
+            La mejor forma de comparar algoritmos es mediante el ritmo de crecimiento y para realzar este análisis siempre hay que tomar en cuenta el término de mayor peso
+        </p>
+    </div>
+
+    <div id="link5" class="main">
+        <h1>Estructuras de control</h1>
+        <p>
+            Nos permiten definir el flujo de nuestro algoritmo, ejecutar acciones en la parte del proceso correcta. Se dividen en 3 grupos:
+        </p>
+        <p>
+            <strong>Estructuras secuenciales:</strong> consiste en ejecutar las instrucciones de principio a fin, una a una sin omitir pasos o desviarse del proceso definido.
+        </p>
+    </div>
+
+    <div id="link6" class="main">
+        <h2>Estructuras selectivas</h2>
+        <p>
+            Nos van a permitir que nuestro algoritmo o programa tome decisiones en el caso de ejecutar un pedazo de código o 
+            un segmento de código o no con base en una condición específica que debemos verificar si se cumple,
+            y si se cumple ejecutamos la codicion y si no se va colocando lo siguiente de nuestro código.
+        </p>
+        <ul>
+            <li>Si, if: Aqui vamos a tener una condición y en caso de que la condición se cumpla vamos a ejecutar un pedazo de código. En caso contrario saltamos esa parte del código.</li>
+            <li>Si-sino, if-else: nos permite una condición y bifurcar el camino para 2 rutas distintas, es decir, si la condición se cumple ejecutamos una acción y se la condición no se cumple ejecutamos otra acciones diferente.</li>
+            <li>Si, sino entonces sino, if-else if- else: aquí vamos a poder verificar la primera condición en caso de que la primera no se cumpla, podemos verificar una segunda condición y en caso de que no se cumpla podemos tener n condiciones. Si este número n que hayamos definido no se cumplen al final se ejecutara un else</li>
+        </ul>
+
+        <p>
+            <strong>Estructuras de selección multiple:</strong> <br>
+            Estas estructuras nos van a permitir concadenar tomar decisiones y al final tener una decisión estándar, en el caso de que no se haya entrado en ninguna de las condiciones.
+        </p>
+    </div>
+
+    <div id="link7" class="main">
+        <h2>Estructuras repetitivas</h2>
+        <p>
+                Estás nos van a permitir crear bucles donde nuestros programas va a estar repitiéndose hasta que una condición les indique lo contrario o mientras una condición les indique que hagamos eso.
+        </p>
+        <ul>
+            <li>Mientras, while. Mientras una condición se cumpla, nosotros vamos a ejecutar todo el código que está dentro de este ciclo y vamos a repetirlo.</li>
+            <li>Haz mientras, do while. Esta instrucción nos permite entrar por lo menos una vez a ejecutar el código que está dentro de esta instrucción y si la condición se cumple , entonces repetimos, pero si la condición no se cumple salimos del código.</li>
+            <li>Para, for. Se utiliza cuando necesitamos repetir una serie de veces definida un código.La diferencia de un “mientras” y un “haz mientras” es que el “haz mientras” se va a ejecutar por lo menos una vez y el “mientras” no necesariamente se va a ejecutar, si la condición no se está cumpliendo no va a entrar ni una vez a ese código y lo saltaría.</li>
+        </ul>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
