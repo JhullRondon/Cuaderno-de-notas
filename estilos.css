@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(190, 245, 190);
+}
+
+#header {
+    margin: -10px;
+    height: 50px;
+    background-color: rgb(99, 200, 240);
+    text-align: center;
+    padding: 70px;
+}
+.recuadro {
+    width: 350px;
+    padding: 5px;
+    background-color: peru;
+    border: 3px solid rgba(185, 97, 10, 0.664);
+    border-radius: 35px 0px 35px 0px;
+}
+
+/*esconde el menu fuera de la pagina hasta que se le pone el raton encima*/
+
+#sidebar a {
+    position: absolute;
+    left: -110px;
+    transition: 0.4s;
+    /*tiempo en que tarda la transicion de escondido a no escondido*/
+    padding: 15px;
+    width: 115px;
+    text-decoration: none;
+    font-size: 14px;
+    font-stretch: condensed;
+    color: antiquewhite;
+    border-radius: 0 6px 6px 0;
+}
+
+/* muestra el menu escondido*/
+
+#sidebar a:hover {
+    left: 0;
+}
+
+/*define el espacio entre botones*/
+
+#fdb {
+    top: 220px;
+    background-color: rgb(77, 77, 218);
+}
+
+#lengC {
+    top: 290px;
+    background-color: rgb(230, 86, 86);
+}
+
+#gitH {
+    top: 360px;
+    background-color: rgb(87, 65, 83);
+}
+
+#regex {
+    top: 420px;
+    background-color: cadetblue;
+}

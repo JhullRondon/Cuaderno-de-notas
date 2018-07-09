@@ -1,76 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Index</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body{
-            background-color: rgb(190, 245, 190);
-        }
-        #header{
-            margin: -10px;
-            height: 50px;
-            background-color: rgb(99, 200, 240);
-            text-align: center;
-            padding: 70px;        }
-
-        /*esconde el menu fuera de la pagina hasta que se le pone el raton encima*/
-        #sidebar a{
-            position: absolute;
-            left: -110px;
-            transition: 0.4s;/*tiempo en que tarda la transicion de escondido a no escondido*/
-            padding: 15px;
-            width: 115px;
-            text-decoration: none;
-            font-size: 14px;
-            font-stretch: condensed;
-            color: antiquewhite;
-            border-radius: 0 6px 6px 0;
-        }
-            /* muestra el menu escondido*/
-        #sidebar a:hover
-        {
-            left: 0;
-        }
-        /*define el espacio entre botones*/
-        #fdb {
-            top :220px;
-            background-color: rgb(77, 77, 218);
-        }
-        #lengC {
-            top: 290px;
-            background-color: rgb(230, 86, 86);
-        }
-        #gitH {
-            top: 360px;
-            background-color: rgb(87, 65, 83);
-        }
-
-    </style>
+    <link rel="stylesheet" href="estilos.css">
     <script>
-
     </script>
 </head>
+
 <body>
     <div id="header">
-        <h1 style="margin: 0%;">Cuaderno de notas</h1>
+        <h1 class="recuadro" style="margin-left: 36%;">Cuaderno de notas</h1>
     </div>
 
     <div id="sidebar" class="sidenav">
         <a href="../Cuaderno de notas/fundamentos de base de datos/documentacion.html" id="fdb">Fundamentos de base de datos</a>
-        <a href="#" id="lengC">Lenguaje de programacion C</a>
+        <a href="#" id="lengC">Lenguaje de Programacion C</a>
         <a href="#" id="gitH">Git y GitHub</a>
+        <a href="#" id="regex">Expresiones Regulares</a>
     </div>
 
-    <div style="margin-left: 120px; width: 40%;">
+    <div style="margin-left: 120px; width: 40%; background-image: url();">
         <h2 id="titulo">Recopilacion de notas de mis cursos en Platzi</h2>
         <p>
-            Una guia para mis apuntes y recodatorios que considere importantes en su momento. <br>
-            El objetivo es practicar el diseño de pag asi como aprender a enlazar todos los conocimientos
-            en un solo mini proyeto
+            Una guia para mis apuntes y recodatorios que considere importantes en su momento.
+            <br> El objetivo es practicar el diseño de pag asi como aprender a enlazar todos los conocimientos en un solo mini
+            proyeto
         </p>
     </div>
 </body>
+
 </html>
