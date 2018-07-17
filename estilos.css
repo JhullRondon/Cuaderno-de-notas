@@ -1,7 +1,6 @@
 /*Los estilos que he aprendido*/
 body {
     background-color: rgba(233, 235, 233, 0.986);
-    background-image: url(cubo.png);
     background-repeat: no-repeat;
     background-size: 30%;
     background-attachment: fixed;
@@ -72,11 +71,16 @@ body {
     top: 420px;
     background-color: cadetblue;
 }
+.cubo {
+    position: absolute;
+    opacity: 0.4;
+}
 
 #main {
+    position: relative;
     margin: auto;
     width: 70%;
-    height: 650px;
+    height: 450px;
     box-shadow: 5px 5px 45px -15px rgba(15,14,15,1);
     border-radius: 7px;
     background-color: antiquewhite;
@@ -91,3 +95,79 @@ p {
     font-family: cursive;
     font-size: 18px;
 }
+.footer {
+    margin: -10px;
+    margin-top: 20px;
+    background-image: radial-gradient(aqua, rgb(121, 121, 250));
+    color: rgb(49, 49, 49);
+}
+.label {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form input {
+    margin: 3px;
+}
+
+.informacion {
+    padding: 8px;
+}
+form h3 {
+    margin: 5px;
+}
+
+.centrado {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* herramienta util para alinear los elementos hijos dentro de la caja padre */
+    display: flex;    
+    /* define como quiere que se distribullan los elementos dentro de la caja padre */
+    justify-content: space-around;
+    /* los valores que puede tomar la propiedad justify-content son: flex-start, flex-end, space-around, space-between */
+
+    /* flex-wrap permite que las cajas hijas se puedan colocar una debajo de otra si es necesario, por defecto viene desactivado para que no se puedan bajar
+    si no que se ajusta a las dimensiones de la caja padre */
+    flex-wrap: nowrap;
+
+    /* flex-direction es una propiedad que permite definir la orientacion del flex */
+    flex-direction: row;
+}
+
+.areaTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.boton {
+    border: none;
+    background-color: peru;
+    padding: 15px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(240, 239, 207);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.boton:hover {
+    background-color: rgb(124, 94, 64);
+    
+}
+.boton:active {
+    background-color: rgb(77, 65, 53);
+}
+
+
+/* footer * {
+    border: 3px solid red;
+} */
