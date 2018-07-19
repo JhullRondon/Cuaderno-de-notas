@@ -1,0 +1,46 @@
+* {
+    font-family: 'Chela One', cursive;
+}
+.header {
+    margin: -10px;
+    background: linear-gradient( rgb(189, 188, 188), rgb(203, 194, 238))
+}
+.container {
+    width: 75%;
+    margin: auto;
+}
+.cubo {
+    width: 70px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.titulo {
+    display: inline-block;
+    margin: auto;  
+}
+.titulo h2 {
+    margin: 0;
+}
+.menu { 
+    display: block;
+    float: right;
+    margin-top: 5px;
+    padding: 3px 5px;
+}
+.menu a {
+    margin-right: -4px;
+    text-decoration: none;
+    font-size: 20px;
+    color: peru;
+    padding: 17px;
+    background-image: radial-gradient(white, lightgray);
+}
+.menu a:hover {
+    background-image: radial-gradient(white, rgb(37, 37, 37));
+}
+
+.menu a:active {
+   background-image: gray;
+   color: rgb(146, 146, 216);
+}
