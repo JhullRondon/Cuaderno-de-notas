@@ -9,29 +9,33 @@
     width: 75%;
     margin: auto;
 }
+
+.tag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
 .cubo {
-    width: 70px;
+    width: 85px;
     cursor: pointer;
     display: inline-block;
 }
 
 .titulo {
-    display: inline-block;
-    margin: auto;  
+    display: inline-block;  
 }
 .titulo h2 {
     margin: 0;
 }
 .menu { 
-    display: block;
-    float: right;
-    margin-top: 5px;
-    padding: 3px 5px;
+    display: flex;
+    justify-content: flex-start;
 }
 .menu a {
     margin-right: -4px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     color: peru;
     padding: 17px;
     background-image: radial-gradient(white, lightgray);
@@ -43,4 +47,28 @@
 .menu a:active {
    background-image: gray;
    color: rgb(146, 146, 216);
+}
+
+.btn {
+    position: relative; 
+    margin-left: 8px; 
+    top: 7px;
+}
+
+.boton {
+    border: none;
+    background-color: peru;
+    padding: 7px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(240, 239, 207);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.boton:hover {
+    background-color: rgb(124, 94, 64);
+    
+}
+.boton:active {
+    background-color: rgb(77, 65, 53);
 }
