@@ -1,0 +1,173 @@
+/*Los estilos que he aprendido*/
+body {
+    background-color: rgba(233, 235, 233, 0.986);
+    background-repeat: no-repeat;
+    background-size: 30%;
+    background-attachment: fixed;
+    background-position: center;
+    
+}
+
+#header {
+    margin: -10px;
+    height: 50px;
+    background-color: rgba(99, 200, 240, 0.801);
+    text-align: center;
+    padding: 70px;
+    background-image: linear-gradient(rgb(103, 150, 252), aqua);
+    
+    border-bottom: 2px solid rgba(28, 196, 230, 0.5);
+}
+.recuadro {
+    width: 350px;
+    padding: 5px;
+    background-image: linear-gradient(peru, rgb(185, 110, 34));
+    border: 3px solid rgba(185, 97, 10, 0.664);
+    border-radius: 35px 0px 35px 0px;
+    box-shadow: 1px 3px 25px -3px black;
+    margin: auto;
+}
+
+/*esconde el menu fuera de la pagina hasta que se le pone el raton encima*/
+
+#sidebar a {
+    position: absolute;
+    left: -110px;
+    transition: 0.4s;
+    /*tiempo en que tarda la transicion de escondido a no escondido*/
+    padding: 15px;
+    width: 115px;
+    text-decoration: none;
+    font-size: 14px;
+    font-stretch: condensed;
+    color: antiquewhite;
+    border-radius: 0 6px 6px 0;
+}
+
+/* muestra el menu escondido*/
+
+#sidebar a:hover {
+    left: 0;
+}
+
+/*define el espacio entre botones*/
+
+#fdb {
+    top: 220px;
+    background-color: rgb(77, 77, 218);
+}
+
+#lengC {
+    top: 290px;
+    background-color: rgb(230, 86, 86);
+}
+
+#gitH {
+    top: 360px;
+    background-color: rgb(87, 65, 83);
+}
+
+#regex {
+    top: 420px;
+    background-color: cadetblue;
+}
+.cubo {
+    position: absolute;
+    opacity: 0.4;
+}
+
+#main {
+    position: relative;
+    margin: auto;
+    width: 70%;
+    height: 450px;
+    box-shadow: 5px 5px 45px -15px rgba(15,14,15,1);
+    border-radius: 7px;
+    background-color: antiquewhite;
+}
+#main h2 {
+    text-align: center;
+    text-shadow: 2px;
+    font-size: 39px;
+}
+p {
+    padding: 10px;
+    font-family: cursive;
+    font-size: 18px;
+}
+.footer {
+    margin: -10px;
+    margin-top: 20px;
+    background-image: radial-gradient(aqua, rgb(121, 121, 250));
+    color: rgb(49, 49, 49);
+}
+.label {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px;
+}
+
+footer a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+form input {
+    margin: 3px;
+}
+
+.informacion {
+    padding: 8px;
+}
+form h3 {
+    margin: 5px;
+}
+
+.centrado {
+    margin-left: 15%;
+    margin-right: 15%;
+    /* herramienta util para alinear los elementos hijos dentro de la caja padre */
+    display: flex;    
+    /* define como quiere que se distribullan los elementos dentro de la caja padre */
+    justify-content: space-around;
+    /* los valores que puede tomar la propiedad justify-content son: flex-start, flex-end, space-around, space-between */
+
+    /* flex-wrap permite que las cajas hijas se puedan colocar una debajo de otra si es necesario, por defecto viene desactivado para que no se puedan bajar
+    si no que se ajusta a las dimensiones de la caja padre */
+    flex-wrap: nowrap;
+
+    /* flex-direction es una propiedad que permite definir la orientacion del flex */
+    flex-direction: row;
+}
+
+.areaTexto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.boton {
+    border: none;
+    background-color: peru;
+    padding: 15px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: rgb(240, 239, 207);
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.boton:hover {
+    background-color: rgb(124, 94, 64);
+    
+}
+.boton:active {
+    background-color: rgb(77, 65, 53);
+}
+
+
+/* footer * {
+    border: 3px solid red;
+} */
