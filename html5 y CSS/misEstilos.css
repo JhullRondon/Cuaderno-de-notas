@@ -136,6 +136,7 @@
 .imgitem {
     width: 390px;
     margin: 5px;
+    cursor: pointer;
 }
 
 .parafo {
