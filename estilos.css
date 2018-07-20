@@ -4,12 +4,15 @@ body {
     background-repeat: no-repeat;
     background-size: 30%;
     background-attachment: fixed;
-    background-position: center;
-    
+    background-position: center;   
+    margin: 0; 
+}
+.fixFooter {
+    min-height: calc(100vh - 186px);
 }
 
 #header {
-    margin: -10px;
+    margin: 0;
     height: 50px;
     background-color: rgba(99, 200, 240, 0.801);
     text-align: center;
@@ -80,7 +83,6 @@ body {
     position: relative;
     margin: auto;
     width: 70%;
-    height: 450px;
     box-shadow: 5px 5px 45px -15px rgba(15,14,15,1);
     border-radius: 7px;
     background-color: antiquewhite;
@@ -96,8 +98,7 @@ p {
     font-size: 18px;
 }
 .footer {
-    margin: -10px;
-    margin-top: 20px;
+    margin: 0;
     background-image: radial-gradient(aqua, rgb(121, 121, 250));
     color: rgb(49, 49, 49);
 }
