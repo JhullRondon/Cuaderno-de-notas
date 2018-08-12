@@ -33,15 +33,20 @@
     justify-content: flex-start;
 }
 .menu a {
-    margin-right: -4px;
+    border-radius: 3px;
+    margin-right: 1px;
     text-decoration: none;
     font-size: 18px;
     color: peru;
     padding: 17px;
     background-image: radial-gradient(white, lightgray);
+    opacity: 0.8;
 }
 .menu a:hover {
-    background-image: radial-gradient(white, rgb(37, 37, 37));
+    text-decoration: underline;
+    color: brown;
+    opacity: 1;
+    transition: 0.5s;
 }
 
 .menu a:active {
@@ -139,9 +144,9 @@ h3, p {
     height: 400px;
     background-color: bisque;
     margin: 5px;
-    overflow: hidden;
 }
 .imgitem {
+    border-radius: 8px;
     width: 390px;
     margin: 5px;
     cursor: pointer;
@@ -209,7 +214,5 @@ h3, p {
     text-decoration: underline;
     border: 2px solid rgb(128, 109, 75);
     color: rgb(107, 86, 73);
-    transition: 0.5s;
+    transition: 0.4s;
 }
-
-.
