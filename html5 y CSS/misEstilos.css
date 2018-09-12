@@ -3,7 +3,7 @@
     margin: 0;
 }
 .container {
-    width: 75%;
+    width: 85%;
     margin: auto;
 }
 /* a partir de aca es el header */
@@ -87,6 +87,7 @@
     box-shadow: 2px 3px 14px 1px;
     height: 350px;
     border-radius: 3px;
+    margin-bottom: 20px;
 }
 
 .imagen {
@@ -134,13 +135,28 @@ h3, p {
     /* grid-template-columns: 200px 200px 200px; */
     /* grid-template-rows: 200px; */
     /* grid-template: filas / columnas; */
-    grid-template: 100px 100px 100px / 200px 200px 200px;
+    /* grid-template: 100px 100px 100px / repeat(3, minmax(200px,1fr)); */
+    grid-template: repeat(4, 350px) / repeat(3, minmax(200px,1fr));
+    /* gap: filas columnas; */
+    column-gap: 10px;
+    row-gap: 30px;
 }
 
 .item {
     background: lightblue;
     padding: 10px;
     border: solid red 3px;
+}
+
+.item:nth-of-type(4) {
+    background: blue;
+    overflow: auto;
+    display: grid;
+    grid-template: 50px 50px 50px / 50px 50px 50px
+}
+
+.item .item {
+    background: yellowgreen;
 }
 .imgitem {
     border-radius: 8px;
